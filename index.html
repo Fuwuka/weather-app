@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts/ProximaNova/stylesheet.css"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script src="js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app" class="wrapper">
+        <div class="content">
+            <header>
+                <div class="container">
+                    <p id="city" >{{ city }}</p>
+                    <cityedit v-show="changing" id="city-edit" @save="hideInput"></cityedit>
+                    <div class="switcher">
+                        <p>&deg;</p>
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="degrees"/>
+                            <div class="checkbox__text">
+                                <p id="celsius" class="disable-selection">C</p>
+                                <p id="fahrenheit" class="disable-selection">F</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="change-location">
+                        <p @click="changeCity" class="disable-selection">Сменить город</p>
+                        <div id="my-location" class="disable-selection">
+                            <img src="images/location.png" alt="">
+                            <p @click="myLocation">Мое местоположение</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div>
+                    <div>
+                        <img :src="icon" alt="">
+                        <p id="temperature">{{temperature}}&deg;</p>
+                    </div>
+                    <p id="description">{{description}}</p>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <div class="characteristics">
+                <div id="wind-container">
+                    <p>Ветер</p>
+                    <p id="wind"><b>{{wind.speed}}</b> м/с, {{wind.direction}}</p>
+                </div>
+                <div id="pressure-container">
+                    <p>Давление</p>
+                    <p id="pressure"><b>{{pressure}}</b> мм рт. ст.</p>
+                </div>
+                <div id="humidity-container">
+                    <p>Влажность</p>
+                    <p id="humidity"><b>{{humidity}}%</b></p>
+                </div>
+                <div id="rain-container">
+                    <p>Вероятность осадков</p>
+                    <p id="rain"><b>{{rain_probability}}%</b></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

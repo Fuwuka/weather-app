@@ -1,0 +1,294 @@
+html, body {
+    background-color: #498CEC;
+    height: 100%;
+    margin: 0;
+}
+p {
+    color: #ffffff;
+    font-family: 'Proxima Nova Rg', Georgia, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0px;
+    margin: 0px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 50px 0px 50px;
+}
+.change-location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 0px 50px;
+    padding: 0px;
+    opacity: 0.6;
+}
+#my-location {
+    display: flex;
+    margin-left: 20px;
+}
+#my-location img{
+    height: 20px;
+    margin: 0px 10px;
+    padding: auto;
+}
+.switcher {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 10px;
+    padding: 0px;
+    height: 31px;
+    align-items: center;
+}
+.switcher > p{
+    height: 15px;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.4);
+}
+#city {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+.disable-selection {
+    -moz-user-select: none;
+     -ms-user-select: none;
+  -khtml-user-select: none;
+ -webkit-user-select: none; 
+ -webkit-touch-callout: none;
+}
+main {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+}
+main p {
+	font-family: 'PT Sans', sans-serif;
+}
+main div div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	font-family: 'PT Sans', sans-serif;
+}
+main div  {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+main img {
+	height: 200px;
+	width: 200px;
+}
+#temperature {
+	font-size: 120px;
+}
+#description {
+	align-self: center;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+  height: 40%;
+}
+footer {
+  flex: 0 0 auto;
+}
+.characteristics p:first-child {
+	color: rgba(255, 255, 255, 0.6);
+}
+.characteristics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 100px;
+}
+#city-edit {
+	position: absolute;
+	z-index: 1;
+	left: 50px;
+	top: 50px;
+	height: 97px;
+	margin: auto 0px;
+}
+#city-edit input {
+	height: 97px;
+	width: 482px;
+	padding: 0;
+	border: 0;
+	border-radius: 8px 0px 0px 8px;
+	font-size: 30px;
+	color: black;
+	vertical-align: middle;
+}
+#city-edit button {
+	background-color: white;
+	color: #1086ff;
+	font-size: 30px;
+	vertical-align: middle;
+	border: 0px;
+	height: 97px;
+	width: 97px;
+	padding: 0;
+	border-radius: 0px 8px 8px 0px;
+	margin: auto 0px;
+}
+.checkbox {
+    margin-left: 10px;
+    height: 31px;
+}
+.checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+}
+.checkbox__text {
+    position: relative;
+    padding: 0 0 0 80px;
+    cursor: pointer;
+}
+.checkbox__text:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 77px;
+    height: 29px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: .2s;
+}
+.checkbox__text:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 38.5px;
+    height: 30px;
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px; 
+    background: rgba(255, 255, 255, 0.4);
+    transition: .2s;
+}
+.checkbox .checkbox__text #celsius {
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    font-weight: 700;
+}
+.checkbox .checkbox__text #fahrenheit {
+    position: absolute;
+    top: 5px;
+    left: 52px;
+    color: rgba(255, 255, 255, 0.4)
+}
+.checkbox input:checked + .checkbox__text:after {
+    border-radius: 0px 8px 8px 0px;
+    width: 40px;
+    left: 38.5px;
+}
+.checkbox input:checked + .checkbox__text #celsius {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+}
+.checkbox input:checked + .checkbox__text #fahrenheit {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+}
+@media screen and (max-width: 880px) {
+	.characteristics div{
+		width: 45%;
+	}
+	.characteristics {
+		margin: 20px 60px;
+	}
+	#city-edit input {
+		width: 300px;
+	}
+}
+@media screen and (max-width: 510px) {
+	.characteristics p:first-child {
+		font-size: 15px;
+	}
+	.characteristics {
+		margin: 10px 30px;
+	}
+	main img {
+		height: 100px;
+		width: 100px;
+	}
+	.change-location {
+		margin: 10px 10px;
+	}
+	.change-location p{
+		font-size: 15px;
+	}
+	#city {
+		font-size: 30px;
+	}
+	.container {
+		margin: 10px 10px;
+	}
+	#city-edit {
+		left: 10px;
+		top: 10px;
+		height: 70px;
+	}
+	#city-edit input{
+		height: 70px;
+		width: 240px;
+	}
+	#city-edit button{
+		height: 70px;
+	}
+}
+@media screen and (max-width: 351px) {
+	.characteristics {
+		flex-direction: column;
+	}
+	.characteristics div{
+		width: 100%;
+	}
+	#city-edit {
+		left: 10px;
+		top: 10px;
+		height: 70px;
+	}
+	#city-edit input{
+		height: 70px;
+		width: 200px;
+	}
+	#city-edit button{
+		height: 70px;
+	}
+	.change-location {
+		flex-direction: column;
+	}
+	#my-location {
+		width: 100%;
+		margin: 0px;
+	}
+	#my-location img {
+		margin-left: 0;
+	}
+}
+  
